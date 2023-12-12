@@ -5,7 +5,9 @@ class ScheduleManager: ObservableObject {
 
     init() {
         schedules.append(Schedule(person: "Neema", dT: "12/18/2023 [14:00 - 15:00]"))
-        schedules.append(Schedule(person: "Sahar", dT: "12/18/2023 [14:30 - 15:00]"))
+        //schedules.append(Schedule(person: "Ethan", dT: "12/18/2023 [14:30 - 15:00]"))
+        schedules.append(Schedule(person: "Madeline", dT: "12/18/2023 [14:30 - 15:00]"))
+        
     }
     
     func findCommonTimeForTwoSchedules() -> String? {
