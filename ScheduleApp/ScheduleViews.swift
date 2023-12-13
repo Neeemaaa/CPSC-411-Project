@@ -225,6 +225,8 @@ struct AddDateTime: View {
             Button("Save") {
                 manager.addSchedule(person: name, startTime: startTime, endTime: endTime)
             }
+        }        .onChange(of: startTime) { newValue in
+            endTime = Calendar.current.date(byAdding: .hour, value: 1, to: newValue) ?? Date()
         }
     }
 }
