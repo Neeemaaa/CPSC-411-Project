@@ -23,9 +23,9 @@ class ScheduleManager: ObservableObject {
 
     // Format time inputs and add to struct
     func addSchedule(person: String, startTime: Date, endTime: Date) {
-        if endTime < startTime {
-            // Create an alert when end time is before start time
-            let alert = UIAlertController(title: "Invalid Entry", message: "End time cannot be before start time.", preferredStyle: .alert)
+        if endTime <= startTime {
+            // Create an alert when end time is same as or before start time
+            let alert = UIAlertController(title: "Invalid Entry", message: "End time must be after start time.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
             
             // Present the alert
